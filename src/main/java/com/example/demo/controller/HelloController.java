@@ -1,17 +1,22 @@
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
 
-    @RequestMapping("/hello")
-    public String index(Model model) {
+    @RequestMapping("/")
+    public String index() {
 
-        model.addAttribute("name", "345hi");
 
-        return "hello";
+
+        return "index";
+    }
+    @RequestMapping("/login")
+    public String login() {
+
+        return "login";
     }
 }
