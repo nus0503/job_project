@@ -27,6 +27,7 @@ public class HelloController {
 
     @GetMapping("/og")
     public void log() {
+
         logger.info("로깅 발생sdsdd!");
     }
 }

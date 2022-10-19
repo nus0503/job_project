@@ -1,74 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--<configuration>-->
+<!--    &lt;!&ndash; 콘솔로 로그를 남김 &ndash;&gt;-->
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <charset>UTF-8</charset>-->
+<!--            <layout class="ch.qos.logback.classic.PatternLayout">-->
+<!--                <Pattern>-->
+<!--                    [%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{36} - %msg%n-->
+<!--                </Pattern>-->
+<!--            </layout>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; 파일로 INFO로그를 남김 &ndash;&gt;-->
+<!--    <appender name="INFO_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <file>./logs/info.log</file> &lt;!&ndash; 파일을 저장할 경로를 정한다 &ndash;&gt;-->
+
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>INFO</level>-->
+<!--            <onMatch>ACCEPT</onMatch> &lt;!&ndash; 해당 레벨만 기록한다. &ndash;&gt;-->
+<!--            <onMismatch>DENY</onMismatch> &lt;!&ndash; 다른 수준의 레벨은 기록하지 않는다.(상위 레벨도 기록 안함), 상위 수준의 레벨에 대한 기록을 원하면 ACCEPT 로 하면 기록된다. &ndash;&gt;-->
+<!--        </filter> &lt;!&ndash; 레벨별 필터링이 필요없을 경우 filter class 관련된 부분을 삭제하면 됨&ndash;&gt;-->
+
+<!--        <encoder>-->
+<!--            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n</pattern> &lt;!&ndash; 해당 패턴 네이밍으로 현재 로그가 기록됨 &ndash;&gt;-->
+<!--        </encoder>-->
+
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>./was-logs/info.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern> &lt;!&ndash; 해당 패턴 네이밍으로 이전 파일이 기록됨 &ndash;&gt;-->
+<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>100MB</maxFileSize> &lt;!&ndash; 한 파일의 최대 용량 &ndash;&gt;-->
+<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
+<!--            <maxHistory>180</maxHistory> &lt;!&ndash; 한 파일의 최대 저장 기한 &ndash;&gt;-->
+<!--        </rollingPolicy>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; 파일로 WARN로그를 남김 &ndash;&gt;-->
+<!--    <appender name="WARN_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+
+<!--        <file>./logs/warn.log</file>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>WARN</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--        <encoder>-->
+<!--            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>./was-logs/warn.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>-->
+<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>100MB</maxFileSize>-->
+<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
+<!--            <maxHistory>180</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--    </appender>-->
+
+
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="STDOUT"/>-->
+<!--    </root>-->
+
+<!--    <logger name="LogController" additivity="false">-->
+<!--        <level value = "DEBUG" />-->
+<!--        <appender-ref ref="INFO_LOG" />-->
+<!--        <appender-ref ref="WARN_LOG" />-->
+<!--    </logger>-->
+
+
+<!--</configuration>-->
+
+
+
+
 <configuration>
+
     <!-- 콘솔로 로그를 남김 -->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <charset>UTF-8</charset>
-            <layout class="ch.qos.logback.classic.PatternLayout">
-                <Pattern>
-                    [%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{36} - %msg%n
-                </Pattern>
-            </layout>
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+            </Pattern>
         </encoder>
     </appender>
 
-    <!-- 파일로 INFO로그를 남김 -->
-    <appender name="INFO_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./logs/info.log</file> <!-- 파일을 저장할 경로를 정한다 -->
-
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
-            <onMatch>ACCEPT</onMatch> <!-- 해당 레벨만 기록한다. -->
-            <onMismatch>DENY</onMismatch> <!-- 다른 수준의 레벨은 기록하지 않는다.(상위 레벨도 기록 안함), 상위 수준의 레벨에 대한 기록을 원하면 ACCEPT 로 하면 기록된다. -->
-        </filter> <!-- 레벨별 필터링이 필요없을 경우 filter class 관련된 부분을 삭제하면 됨-->
-
-        <encoder>
-            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n</pattern> <!-- 해당 패턴 네이밍으로 현재 로그가 기록됨 -->
+    <!-- 파일로 로그를 남김 -->
+    <appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/logback.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+            </Pattern>
         </encoder>
 
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./was-logs/info.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern> <!-- 해당 패턴 네이밍으로 이전 파일이 기록됨 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize> <!-- 한 파일의 최대 용량 -->
-            </timeBasedFileNamingAndTriggeringPolicy>
-            <maxHistory>180</maxHistory> <!-- 한 파일의 최대 저장 기한 -->
-        </rollingPolicy>
-    </appender>
+        <!-- 로그 파일이 10KB가 넘으면 새로운 로그 파일로 만드는 정책 -->
+        <triggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10KB</MaxFileSize>
+        </triggeringPolicy>
 
-    <!-- 파일로 WARN로그를 남김 -->
-    <appender name="WARN_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-
-        <file>./logs/warn.log</file>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>WARN</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <encoder>
-            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n</pattern>
-        </encoder>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./was-logs/warn.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-            <maxHistory>180</maxHistory>
+        <!-- 파일을 덮어쓰는 정책 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>./logs/logback2.%i.log.zip</FileNamePattern>
+            <!--
+                MinIndex, MaxIndex => 로그 파일 정책
+                logback2.1.log.zip, logback2.2.log.zip, ...
+            -->
+            <MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>
         </rollingPolicy>
     </appender>
 
 
     <root level="INFO">
-        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="consoleAppender"/>
     </root>
 
-    <logger name="LogController" additivity="false">
-        <level value = "DEBUG" />
-        <appender-ref ref="INFO_LOG" />
-        <appender-ref ref="WARN_LOG" />
+    <!-- com.juhyun 하위 패키지 -->
+    <logger name="com.example.demo"  level="info" additivity="false">
+        <appender-ref ref="fileAppender" />
+        <appender-ref ref="consoleAppender" />
     </logger>
 
-    <logger name="org.hibernate.SQL" additivity="false">
-        <level value = "DEBUG" />
-        <appender-ref ref="INFO_LOG" />
-    </logger>
 </configuration>

@@ -14,6 +14,7 @@ public class LogController {
 
     @GetMapping("/log")
     public void log() {
+
         logService.log();
     }
 }
