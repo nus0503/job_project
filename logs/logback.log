@@ -1,24 +1,9 @@
-02:24:42.901 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 5032 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:24:42.926 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:24:46.341 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 4.375 seconds (JVM running for 5.411)
-02:27:06.730 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 896 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:27:06.735 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:27:09.580 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 3.564 seconds (JVM running for 4.47)
-02:36:29.190 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 9888 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:36:29.204 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:36:31.889 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 3.411 seconds (JVM running for 4.394)
-02:39:04.680 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 11184 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:39:04.685 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:39:07.457 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 3.514 seconds (JVM running for 4.574)
-02:41:55.841 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 9760 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:41:55.846 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:41:58.654 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 3.549 seconds (JVM running for 4.475)
-02:44:59.009 [main] INFO  c.e.d.DemoApplication - Logging - Info log
-02:44:59.013 [main] WARN  c.e.d.DemoApplication - Logging - Warn log
-02:44:59.013 [main] ERROR c.e.d.DemoApplication - Logging - Error log
-02:44:59.373 [restartedMain] INFO  c.e.d.DemoApplication - Logging - Info log
-02:44:59.374 [restartedMain] WARN  c.e.d.DemoApplication - Logging - Warn log
-02:44:59.374 [restartedMain] ERROR c.e.d.DemoApplication - Logging - Error log
-02:45:00.247 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-DS42C0A with PID 9808 (C:\Users\kjs\Desktop\spring_project\demo\build\classes\java\main started by kjs in C:\Users\kjs\Desktop\spring_project\demo)
-02:45:00.249 [restartedMain] INFO  c.e.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-02:45:03.680 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 4.289 seconds (JVM running for 5.368)
+19:03:07.974 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 4.759 seconds (JVM running for 5.739)
+19:05:25.612 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-C3QVV7S with PID 13816 (C:\Users\KJS\Desktop\spring_project\demo\build\classes\java\main started by KJS in C:\Users\KJS\Desktop\spring_project\demo)
+19:05:25.621 [restartedMain] INFO  c.e.d.DemoApplication - The following 1 profile is active: "dev"
+19:11:05.362 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-C3QVV7S with PID 7444 (C:\Users\KJS\Desktop\spring_project\demo\build\classes\java\main started by KJS in C:\Users\KJS\Desktop\spring_project\demo)
+19:11:05.369 [restartedMain] INFO  c.e.d.DemoApplication - The following 1 profile is active: "dev"
+19:11:09.716 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 5.188 seconds (JVM running for 6.122)
+19:15:27.188 [restartedMain] INFO  c.e.d.DemoApplication - Starting DemoApplication using Java 11.0.16.1 on DESKTOP-C3QVV7S with PID 9952 (C:\Users\KJS\Desktop\spring_project\demo\build\classes\java\main started by KJS in C:\Users\KJS\Desktop\spring_project\demo)
+19:15:27.199 [restartedMain] INFO  c.e.d.DemoApplication - The following 1 profile is active: "dev"
+19:15:31.734 [restartedMain] INFO  c.e.d.DemoApplication - Started DemoApplication in 5.301 seconds (JVM running for 6.252)

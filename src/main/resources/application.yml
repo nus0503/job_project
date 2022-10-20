@@ -5,24 +5,24 @@ spring:
 
 
 ---
-## DATABASE
-#spring:
-#  profiles:
-#    active: dev
-#  timerName: exampleTimer
-#  datasource:
-#    driver-class-name: oracle.jdbc.driver.OracleDriver
-#    url: jdbc:oracle:thin:@localhost:1521/xe
-#    username: sys as sysdba
-#    password:
-#
-#
-#
-#---
-## MyBatis
-#mybatis:
-#  type-aliases-package: com.example.demo        # 패키지 명을 생략할 수 있도록 alias 설정
-#  mapper-locations: classpath:mapper/**/*.xml   # mapper.xml 위치 지정
+# DATABASE
+spring:
+  profiles:
+    active: dev
+  timerName: exampleTimer
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521/xe
+    username: hr
+    password: hr
+
+
+
+---
+# MyBatis
+mybatis:
+  type-aliases-package: com.example.demo.model        # 패키지 명을 생략할 수 있도록 alias 설정  -- MyBatis xml 작성시 resultType 같은 경우 기존 resultType=com.example.demo.model.DTO파일 에서 resultType=DTO파일로 할 수 있다.
+  mapper-locations: classpath:mapper/*.xml   # mapper.xml 위치 지정
 #  configuration:
 #    mapUnderscoreToCamelCase=true               # model 프로퍼티 camel case 설정
 #    aggressiveLazyLoading=false                 #활성화되면 모든 메서드 호출은 객체의 모든 lazy properties 을 로드한다
