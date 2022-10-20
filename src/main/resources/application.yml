@@ -11,7 +11,7 @@ spring:
     active: dev
   timerName: exampleTimer
   datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@127.0.0.1:1521/xe
     username: hr
     password: hr
